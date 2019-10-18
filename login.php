@@ -71,6 +71,7 @@ include "inc/style.php";
 					</div>
 					<a href="registration.php">Регистрация</a> | <a href="returnpas.php">Забыли пароль?</a>
 				</form>
+
 			</div>
 		</div><!-- /.row -->
 	</div><!-- /.container -->');
