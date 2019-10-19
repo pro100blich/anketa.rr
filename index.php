@@ -5,20 +5,20 @@ header("Content-Type:text/html;charset=UTF-8");
 require_once("config.php");
 require_once("classes/ACore.php");
 require_once("classes/ACore_Admin.php");
-if (isset($_SESSION['sess'])) 
+if (isset($_SESSION['sess']))
 {
 	if($_GET['option']) {
 	$class = trim(strip_tags($_GET['option']));
 }
 else {
-	$class = 'main';	
+	$class = 'main';
 }
 
 if(file_exists("classes/".$class.".php")) {
 	///
 	include("classes/".$class.".php");
 	if(class_exists($class)) {
-		
+
 		$obj = new $class;
 		$obj->get_body();
 	}
@@ -29,7 +29,7 @@ if(file_exists("classes/".$class.".php")) {
 else {
 	exit("<p>Не правильный адресс</p>");
 }
-	//echo '<script type="text/javascript"> window.location = "../classes/admin.php"</script>';
+	//echo '  <script type="text/javascript"> window.location = "../classes/admin.php"</script>';
 }
 else{
 	echo '<script type="text/javascript"> window.location = "../login.php"</script>';
